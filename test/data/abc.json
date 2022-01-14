@@ -1,0 +1,25 @@
+[
+
+    [ 1, 2, 3 ],
+    {
+        "arr": [ 8, 7 , 6 ],
+        "something": "here",
+        "someproperty": "there",
+        "a": {
+            "b": {
+                "c": 1234
+            }
+        },
+        "extra-only-here": true
+    },
+    {
+        "something": "here",
+        "someproperty": "there",
+        "arr": [ 1, 2, 3, 4],
+        "a": {
+            "b": {
+                "c": 1234
+            }
+        }
+    }
+]

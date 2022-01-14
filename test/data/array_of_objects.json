@@ -1,0 +1,18 @@
+
+[
+    { 
+        "asb" : 123,
+        "foobar" :222,
+        "abc": "asas"
+    },
+    { 
+        "asb" : 2223,
+        "foobar" :222,
+        "abc": "asas"
+    },
+    { 
+        "someother" : 2223,
+        "object" :222
+    }
+
+]

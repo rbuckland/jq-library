@@ -48,6 +48,11 @@ jq-library on  main [?]
     }
 ]
 
+❯ jq -r 'include "data-conversion"; arr_objects_to_csv' < test/data/abc-no-array.json "arr.0","arr.1","arr.2","something","someproperty","a.b.c","extra-only-here","arr.3"
+"foo","bar","baz","here","there",1234,true,
+8,7,6,"here","there",1234,true,
+1,2,3,"here","there",1234,,4
+
 ```                           
 
 * CSV to Object

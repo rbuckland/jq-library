@@ -48,7 +48,8 @@ jq-library on  main [?]
     }
 ]
 
-❯ jq -r 'include "data-conversion"; arr_objects_to_csv' < test/data/abc-no-array.json "arr.0","arr.1","arr.2","something","someproperty","a.b.c","extra-only-here","arr.3"
+❯ jq -r 'include "data-conversion"; arr_objects_to_csv' < test/data/abc-no-array.json
+"arr.0","arr.1","arr.2","something","someproperty","a.b.c","extra-only-here","arr.3"
 "foo","bar","baz","here","there",1234,true,
 8,7,6,"here","there",1234,true,
 1,2,3,"here","there",1234,,4
@@ -60,9 +61,13 @@ jq-library on  main [?]
   Take note of the "padded" row alligned Arrays, because another array was longer. 
   May remove that "feature".
 
+This next example, takes the above JSON, and round trips it back to JSON.
+
 ```
 jq-library on  main [?]
-❯ jq -r 'include "data-conversion"; arr_objects_to_csv' < test/data/abc-no-array.json | jq -r --slurp --raw-input 'include "data-conversion"; csv_to_json'
+❯ jq -r 'include "data-conversion"; arr_objects_to_csv' \
+  < test/data/abc-no-array.json \
+  | jq -r --slurp --raw-input 'include "data-conversion"; csv_to_json'
 [
   {
     "arr": [
